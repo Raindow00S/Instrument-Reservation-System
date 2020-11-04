@@ -1,0 +1,10 @@
+.login-frame
+{
+    text-align: center;
+    
+    /*TO DO 为什么不能调边距的？
+    padding: 0;
+    border:5px solid red;
+    width: 400px;
+    height: 180px;*/
+}

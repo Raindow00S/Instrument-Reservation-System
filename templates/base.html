@@ -1,0 +1,38 @@
+<!--父模板，必须命名为base-->
+<!--block介绍-->
+<!--title:该页主题-->
+<!--cssFile:该页使用的CSS-->
+<!--navBar:导航栏-->
+<!--mainContainer:导航栏之下的内容-->
+<!--JS:JS代码-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf=8">
+    <title>{% block title %}{% endblock %}</title>
+
+    {% block cssFile %}
+    <link rel="stylesheet" type="text/css" href="../static/css/navBar.css">
+    {% endblock %}
+</head>
+
+<body>
+    {% block navBar %}
+    <div class="nav-bar">
+        <!--TO DO 如何将所有选项设为全局变量，并用循环语句？-->
+        <ul>
+            <li><a href="/">主页</a></li>
+            <li><a href="/login">登录</a></li>
+            <li><a href="/">注册</a></li>
+        </ul>
+    </div>
+    {% endblock %}
+
+    {% block mainContainer %}
+    {% endblock %}
+
+    {% block JS %}
+    {% endblock %}
+</body>
+</html>
