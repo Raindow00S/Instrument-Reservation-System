@@ -13,11 +13,11 @@
         <form>
             <div class="input-item">
                 账号<br>
-                <input type="text" name="user-name"><br>
+                <input type="text" name="user-name" id="user-name"><br>
             </div>
             <div class="input-item"></div>
             密码<br>
-                <input type="password" name="password"><br>
+                <input type="password" name="password" id="user-name"><br>
                 <button type="button" id="login">登录</button>
             </div>
         </form>
@@ -27,4 +27,32 @@
 
 {% block JS %}
 <!--TO DO 点击登录按钮发送数据-->
+<script>
+    $(function() {
+        // 按下id为login的按钮
+        $('#login').click(function() {
+            // 将表单数据存为变量
+            var name = $("#user-name").val();
+            var pass = $("password").val();
+
+            // 调用ajax向服务器发送信息
+            $.ajax({
+                async:"fales",
+                type:"POST",
+                url:"/login",
+                data: {
+                    "user-name":name,
+                    "password":pass
+                },
+                // 调用app.py中的函数，接收返回值
+                // 若成功
+                success:function(data) {
+                    // TO DO app.py数据库相关代码
+                }
+            })
+        }
+    }
+    
+    )
+</script>
 {% endblock %}
