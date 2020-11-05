@@ -1,9 +1,15 @@
 .login-frame
 {
+    padding-left: 400px;
+    padding-right: 400px;
+    border: 5px solid red;
+    margin-top: 50px;
+}
+
+.login-box
+{
     text-align: center;
-    
-    /*TO DO 块级盒子属性 */
-    border: 5px solid black;
+    border: 5px solid rgba(16, 175, 214, 0.74);
 }
 
 .input-item
